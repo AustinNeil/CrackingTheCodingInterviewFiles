@@ -1,0 +1,54 @@
+Example 1
+foo(int[] array) {
+    int sum = 0;
+    int product = 1;
+    for (int i = 0; i < array.length; i++){
+        sum += array[i]
+    }
+    for (int i = 0; i < array.length; i++){
+        product *= array[i]
+    }
+    system.out.println(sum + ", " + product);
+}
+2 iterations don't matter
+Time: O(N)
+
+Example 2
+printPairs(int[] array) {
+    for (int i = 0; i < array.length; i++){
+        for (int j = 0; j < array.length; j++){
+            system.out.println(array[i] + "," + array[i])
+        }
+    }
+}
+nested for loops = O(N^2)
+Time: O(N^2)
+
+Example 3
+printPairs(int[] array) {
+    for (int i = 0; i < array.length; i++){
+        for (int j = i + 1; j < array.length; j++){
+            system.out.println(array[i] + "," + array[i])
+        }
+    }
+}
+nested for loops = O(N^2)
+Because the inner loop is run roughly N / 2 times, the official complexity would be O(N^2/2)
+But, constants don't matter so,
+Time: O(N^2)
+
+Example 4
+printPairs(int[] arrayA, int[] arrayB) {
+    for (int i = 0; i < arrayA.length; i++){
+        for (int j = 0; j < arrayB.length; j++){
+            if( arrayA > ArrayB){
+                system.out.println(array[i] + "," + array[i])
+            }
+        }
+    }
+}
+2 Independant inputs, inner if statement is just O(1)
+a and b are independant
+Time O(a*b)
+
+Example 5
